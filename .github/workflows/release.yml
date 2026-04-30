@@ -27,6 +27,7 @@ jobs:
       - name: Build Linux Binary
         run: |
           CGO_ENABLED=1 GOOS=linux GOARCH=amd64 \
+          CGO_LDFLAGS="-lm" \
           go build -o entropy-key-scanner-linux-amd64 ./cmd/engine/main.go
 
       - name: Create GitHub Release
