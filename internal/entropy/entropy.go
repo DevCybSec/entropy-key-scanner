@@ -1,7 +1,7 @@
 package entropy
 
 /*
-cgo LDFLAGS: -lm
+#cgo LDFLAGS: -lm
 #include "entropy.h"
 */
 import "C"
